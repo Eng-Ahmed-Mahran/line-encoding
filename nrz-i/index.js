@@ -83,17 +83,17 @@ $(document).ready(function () {
 				var k=0;
 				console.log(arr_databit);
 				
-				//initial setting when 0 then +ve voltage when 1 then -ve voltage
+				//initial setting when 0 then -ve voltage when 1 then +ve voltage
 				
 				if(arr_databit[0]=="0")
 				{
 					x_axis[k] = k;
-					y_axis[k] = 1*voltage;
+					y_axis[k] = -1*voltage;
 				}
 				else
 				{
 					x_axis[k] = k;
-					y_axis[k] = -1*voltage;	
+					y_axis[k] = 1*voltage;	
 				}
 				k++;
 				
@@ -105,12 +105,12 @@ $(document).ready(function () {
 						if(arr_databit[0]=="0")
 						{
 							x_axis[k] = k;
-							y_axis[k] = 1*voltage;
+							y_axis[k] = -1*voltage;
 						}
 						else
 						{
 							x_axis[k] = k;
-							y_axis[k] = -1*voltage;	
+							y_axis[k] = 1*voltage;	
 						}
 					}
 					else
