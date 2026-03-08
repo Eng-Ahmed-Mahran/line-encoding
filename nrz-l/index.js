@@ -1,8 +1,8 @@
 var string = "";
 string+="In NRZ-L the level of voltage determines the value of the bit.<br>"
 string+="Rules:<br>"
-string+="• 0 bit is represented by +V<br>"
-string+="• 1 bit is represented by -V."
+string+="• 0 bit is represented by -V<br>"
+string+="• 1 bit is represented by +V."
 
 // Typing Content
 $("#about_nrz-l").typed({
@@ -86,12 +86,12 @@ $(document).ready(function () {
 				if(arr_databit[0]==0)           //According to NRZ-L if databit is 0 
 				{                               //Then y-axis should have positive voltage
 					x_axis[k] = k;
-					y_axis[k] = 1*voltage;
+					y_axis[k] = -1*voltage;
 				}
 				else                             //If databit is 1 the y-axis should have 
 				{                                //negative voltage
 					x_axis[k] = k;
-					y_axis[k] = -1*voltage;	
+					y_axis[k] = +1*voltage;	
 				}
 				k++;
 				
@@ -103,12 +103,12 @@ $(document).ready(function () {
 					if(arr_databit[i]==1)
 					{	
 						x_axis[k] = k;
-						y_axis[k] = -1*voltage;
+						y_axis[k] = 1*voltage;
 					}
 					else
 					{
 						x_axis[k] = k;
-						y_axis[k] = 1*voltage;	
+						y_axis[k] = -1*voltage;	
 					}
 					k++;
 				}
